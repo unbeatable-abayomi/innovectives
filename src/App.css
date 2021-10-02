@@ -20,7 +20,7 @@ background-color: brown;
   margin-left: -1.5rem;
 
 }
-.parent,.parentloans{
+.parent{
   display: flex;
   justify-content: space-around
   
@@ -72,12 +72,43 @@ background-color: brown;
   border-radius: 2px;
 }
 .parentloans{
-  height: 48px;
+  display: flex;
+  justify-content: space-evenly;
+  justify-self: center;
+  height: 40px;
   background: #334585;
   border-radius: 0px 8px 8px 0px;
   margin-top: 1rem;
-  margin-left: -3.5rem;
+  margin-left: -3rem;
+  padding-top: 9.3px;
 
+}
+
+.fipieChart,.loans{
+  color: #FFFFFF;
+  font-size: 1.2rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.fipieChart{
+  margin-top: 3px;
+}
+.newButton{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #0D1F5F;
+}
+.buttonText{
+ font-weight: bold;
+  width: 42px;
+  height: 22px;
+  margin-top: 3px;
+  background: #3BE5BF 0% 0% no-repeat padding-box;
+  border-radius: 8px;
+    padding-top: 0.3rem;
+    padding-left: 0.7rem;
+}
+.divlineAbove{
+  margin-left: -1.8rem;
+  margin-top: 1rem;
 }
 
 
