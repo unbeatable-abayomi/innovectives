@@ -25,6 +25,27 @@ background-color: brown;
   justify-content: space-around
   
 }
+.slimline_wrapper{
+  display: flex;
+
+  justify-content: flex-start;
+  margin-bottom: 12px;
+}
+.slimlineOne{
+  width: 20%;
+  height: 0px;
+  border: 2px solid #334585;
+  background-color: #334585;
+  border-radius: 2px;
+  margin-left: 9px;
+}
+.slimlineTwo{
+  width: 6%;
+  border: 2px solid #334585;
+  background-color: #334585;
+  border-radius: 2px;
+  margin-left: 7px;
+}
 .child{
   width: 26px;
   height: 24px;
@@ -71,6 +92,59 @@ background-color: brown;
   background-color: #334585;
   border-radius: 2px;
 }
+
+.parentFive .childTwo .lineDiv{
+  width: 145%;
+  border: 3px solid #334585;
+  background-color: #334585;
+  border-radius: 2px;
+}
+.parentSix .childTwo .lineDiv{
+  width: 145%;
+  border: 3px solid #334585;
+  background-color: #334585;
+  border-radius: 2px;
+}
+
+.parentSeven .childTwo .lineDiv{
+  width: 135%;
+  border: 3px solid #334585;
+  background-color: #334585;
+  border-radius: 2px;
+}
+
+.parentEight .childTwo .lineDiv{
+  width: 90%;
+  border: 3px solid #334585;
+  background-color: #334585;
+  border-radius: 2px;
+}
+.parentNine .childTwo .lineDiv{
+  width: 140%;
+  border: 3px solid #334585;
+  background-color: #334585;
+  border-radius: 2px;
+}
+.parentTen .childTwo .lineDiv{
+  width: 110%;
+  border: 3px solid #334585;
+  background-color: #334585;
+  border-radius: 2px;
+}
+
+.parentEleven .childTwo .lineDiv{
+  width: 80%;
+  border: 3px solid #334585;
+  background-color: #334585;
+  border-radius: 2px;
+}
+
+
+
+
+
+
+
 .parentloans{
   display: flex;
   justify-content: space-evenly;
@@ -109,6 +183,10 @@ background-color: brown;
 .divlineAbove{
   margin-left: -1.8rem;
   margin-top: 1rem;
+}
+
+.divSix,.divSeven{
+  margin-bottom: 2.5rem;
 }
 
 
