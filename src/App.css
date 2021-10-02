@@ -4,9 +4,10 @@ body{
 }
 
 .App {
+  display: flex;
 width: 100vw;
 height: 100vh;
-background-color: brown;
+background-color:#F4F7FA;
 }
 .Sidebar{
   height: 100%;
@@ -15,6 +16,7 @@ background-color: brown;
   padding: 3rem;
   
 }
+
 .main_container{
   margin-top: 2rem;
   margin-left: -1.5rem;
@@ -188,6 +190,56 @@ background-color: brown;
 .divSix,.divSeven{
   margin-bottom: 2.5rem;
 }
+.FiPhoneCall{
+  color: #121314;
+  margin-right: 3rem;
+  font-size: 20px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+.nameText{
+  color: #121314;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  font-size: 20px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+.Navbar{
+  display: flex;
+  justify-content: flex-end;
+  padding: 2.5rem;
+}
+.Dashboard{
+  
+  height: 100%;
+  width: 100%;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+.dashBoardText{
+  margin-top: 2rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin-left: 4rem;
+}
+.activeLoansPlaneItems{
+  display: flex;
+  justify-content: space-around;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+.activeLoansPlane{
+  padding-top: 1.2rem;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+box-shadow: 0px 8px 16px #0000000A;
+border-radius: 8px;
+height: 256px;
+}
+.NoResultText{
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 
 
 
