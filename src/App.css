@@ -1,38 +1,84 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+
 .App {
-  text-align: center;
+width: 100vw;
+height: 100vh;
+background-color: brown;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Sidebar{
+  height: 100%;
+  width: 200px;
+  background-color: #0D1F5F;
+  padding: 3rem;
+  
 }
+.main_container{
+  margin-top: 2rem;
+  margin-left: -1.5rem;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.parent,.parentloans{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around
+  
+}
+.child{
+  width: 26px;
+  height: 24px;
+  background-color: #334585;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 2rem;
+  border-radius: 2px;
+  padding: 3px;
+}
+.childTwo{
+  width: 89px;
+  height: 0px;
+ 
+  margin-right: 4.3rem;
+  margin-top: 0.9rem;
+  margin-left: -1.3rem;
+  padding: 0px;
+}
+.parentOne .childOne{
+  width: 26px;
+}
+.parentOne .childTwo .lineDiv{
+  width: 110%;
+  border: 3px solid #334585;
+  background-color: #334585;
+  border-radius: 2px;
+}
+.parentTwo .childTwo .lineDiv{
+  width: 180%;
+  border: 3px solid #334585;
+  background-color: #334585;
+  border-radius: 2px;
+}
+.parentThree .childTwo .lineDiv{
+  width: 160%;
+  border: 3px solid #334585;
+  background-color: #334585;
+  border-radius: 2px;
+}
+.parentFour .childTwo .lineDiv{
+  width: 140%;
+  border: 3px solid #334585;
+  background-color: #334585;
+  border-radius: 2px;
+}
+.parentloans{
+  height: 48px;
+  background: #334585;
+  border-radius: 0px 8px 8px 0px;
+  margin-top: 1rem;
+  margin-left: -3.5rem;
+
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
