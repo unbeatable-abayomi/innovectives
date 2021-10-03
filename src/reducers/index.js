@@ -2,7 +2,7 @@ import {combineReducers} from 'redux';
 
 const mobileDevices = (listOfMobileDevices = [],action)=>{
         if(action.type === 'CREATE_CATEGORY' && action.payload.name === 'MOBILE_DEVICE'){
-            return [...listOfMobileDevices,action.payload.amount]
+            return [...listOfMobileDevices,action]
         }
         else{
             return listOfMobileDevices;
