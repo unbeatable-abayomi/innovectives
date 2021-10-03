@@ -3,6 +3,8 @@ import {combineReducers} from 'redux';
 const addMobileDevices = (listOfMobileDevices = [],action)=>{
         if(action.type === 'CREATE_CATEGORY' && action.payload.name === 'MOBILE_DEVICE'){
             return [...listOfMobileDevices,action]
+        }else if(action.type === 'DELETE_CATEGORY' && action.payload.name === 'MOBILE_DEVICE'){
+                return listOfMobileDevices.filter(d => d !== action.payload.description )
         }
         else{
             return listOfMobileDevices;

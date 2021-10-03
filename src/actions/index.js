@@ -1,11 +1,27 @@
-export const createCategory = (amount,name) => {
+export const createCategory = (description,amount,name) => {
     return{
         type : 'CREATE_CATEGORY',
         payload: {
-                amount:amount,
-                name:name
+            description,
+                amount,
+                name
 
         } 
+    }
+   
+}
+
+export const deleteFromCategory = (item) => {
+    console.log("true",item);
+    item.type = 'DELETE_CATEGORY'
+    return{
+        type : 'DELETE_CATEGORY',
+        payload: {
+           
+                item
+
+        } 
+        
     }
    
 }

@@ -2,9 +2,34 @@ import React, { Component } from 'react'
 import NavBar from './NavBar';
 import { FcSmartphoneTablet } from "react-icons/fc"
 import {connect} from 'react-redux';
-import {createCategory,preventDefault} from '../actions'
+import {createCategory,preventDefault,deleteFromCategory} from '../actions'
 
  class Dashboard extends Component {
+     renderMobile(){
+      if (this.props.mobiles.length > 0){
+      return this.props.mobiles.map((mobile)=>{
+             return (
+                // <div className='box boxOne' key={mobile.payload.name}>
+                // <div className="square-box">{mobile.payload.amount}</div>
+                //   <div className='lineDiv1'>{mobile.payload.description}</div>
+                //   <div className='lineDiv2'> </div>
+                //   <div className='rectangle'></div>
+                // </div>
+                <div>
+
+               
+                            <tr key={mobile.payload.name}>
+                            <td>{mobile.payload.amount}</td>
+                            <td>{mobile.payload.description}</td>
+                            </tr>
+                            <button onClick={()=>this.props.deleteFromCategory(mobile)}>Remove</button>
+                            </div>     
+             )
+         })
+        }else{
+            return "NO Mobile Device"
+        }
+     }
     render() {
         return (
             <div className='Dashboard'>
@@ -35,6 +60,7 @@ import {createCategory,preventDefault} from '../actions'
                 </div>
                 <hr className='hr_line'/>
                 <h3 className='NoResultText'>No Results</h3>
+                <h3 className='NoResultText'>{this.renderMobile()}</h3>
                 <div className='cards'>
                         <div className='box boxOne'>
                         <div className="square-box"></div>
@@ -76,7 +102,7 @@ import {createCategory,preventDefault} from '../actions'
                     
                         <div className='box boxFour'>
                         <form className='form-inputs' onSubmit={this.props.preventDefault}>
-              <textarea type='text' placeholder='enter item description'></textarea>
+              <textarea id='description' type='text' placeholder='enter item description'></textarea>
                     <input id='amount' placeholder='enter amount' type='text'/>
                     <select id = "dropdown" ref = {(input)=> this.menu = input}>
     <option value="N/A">N/A</option>
@@ -86,7 +112,8 @@ import {createCategory,preventDefault} from '../actions'
     <option value="HOME_APPLIANCES">Home Appliances</option>
     <option value="GAMING_CONSOLES">Gaming Consoles</option>
 </select>
-                    <button onClick={()=>this.props.createCategory(document.getElementById('amount').value,this.menu.value)} >Submit</button>
+                    <button onClick={()=>this.props.createCategory(document.getElementById('description').value,
+                    document.getElementById('amount').value,this.menu.value)} >Submit</button>
                 </form>
                         </div>
                         <div className='box boxFour'>
@@ -114,5 +141,6 @@ const mapStateToProps = state =>{
 
 export default connect(mapStateToProps,{
     createCategory:createCategory,
-    preventDefault:preventDefault
+    preventDefault:preventDefault,
+    deleteFromCategory:deleteFromCategory
 }) (Dashboard);
