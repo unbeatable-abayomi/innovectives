@@ -6,7 +6,7 @@ body{
 .App {
   display: flex;
 width: 100vw;
-height: 100vh;
+height: 150vh;
 background-color:#F4F7FA;
 }
 .Sidebar{
@@ -191,33 +191,49 @@ background-color:#F4F7FA;
   margin-bottom: 2.5rem;
 }
 .FiPhoneCall{
-  color: #121314;
+  
+  color: #0D1F5F;
   margin-right: 3rem;
   font-size: 20px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
 }
 .nameText{
-  color: #121314;
-  margin-left: 3rem;
+  display: flex;
+  color: #0D1F5F;
+  margin-left: 1.5rem;
   margin-right: 3rem;
   font-size: 20px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
 }
+.ayoText{
+  margin-top: .3rem;
+  margin-left: 2rem;
+}
+.GoChevronDown{
+  margin-top: .7rem;
+  padding-left: 1rem;
+}
+.nameTextIcon{
+  font-size: 40px; 
+}
 .Navbar{
+  color: #0D1F5F;
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-end;
   padding: 2.5rem;
 }
 .Dashboard{
-  
+  color: #0D1F5F;
   height: 100%;
   width: 100%;
   padding-left: 5rem;
   padding-right: 5rem;
 }
 .dashBoardText{
+  color: #0D1F5F;
   margin-top: 2rem;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   margin-left: 4rem;
@@ -225,10 +241,12 @@ background-color:#F4F7FA;
 .activeLoansPlaneItems{
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
+  color: #0D1F5F;
 }
 .activeLoansPlane{
+  color: #0A194E;
   padding-top: 1.2rem;
   background: #FFFFFF 0% 0% no-repeat padding-box;
 box-shadow: 0px 8px 16px #0000000A;
@@ -236,10 +254,101 @@ border-radius: 8px;
 height: 256px;
 }
 .NoResultText{
+  color: #0A194E;
   text-align: center;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+.cards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 4rem;
+
+}
+
+.box{
+  width: 320px;
+height: 270px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+box-shadow: 0px 8px 16px #0000000A;
+border-radius: 16px;
+margin: 2rem;
+padding-top: 1rem;
+padding-left: 1rem;
+}
+
+.square-box{
+  width: 56px;
+height: 56px;
+background: #D3DFEA 0% 0% no-repeat padding-box;
+border-radius: 8px;
+margin-bottom: 2rem;
+}
+.lineDiv1{
+  width: 40%;
+  border: 4px solid #D3DFEA;
+  background-color: #D3DFEA;
+  border-radius: 3px;
+  margin-bottom: 2.5rem;
+
+}
+.lineDiv2{
+  width: 80%;
+  border: 4px solid #D3DFEA;
+  background-color: #D3DFEA;
+  border-radius: 3px;
+  margin-bottom: 2.5rem;
+}
+.rectangle{
+  width: 115px;
+height: 56px;
+background: #D3DFEA24 0% 0% no-repeat padding-box;
+border: 1px solid #D2DFE9;
+border-radius: 8px;
+}
+.hr_line{
+  border: 1px solid #E7E9EB;
+}
+
+.FcSmartphoneTablet{
+  font-size: 40px;
+  margin-top: 20px;
+}
+.deviceloans{
+  display: flex;
+}
+.deviceloansText{
+  color: #0A194E;
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#deviceloansbutton{
+  margin-top: 20px;
+  margin-left: 20px;
+}
+#priceRange{
+padding: 0;
+margin: 0;
+color: #0A194E;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.availableDevicesText{
+  margin-top: 20px;
+  text-align: center;
+  width: 225px;
+  height: 36px;
+  padding-top: 15px;
+  background: #0D1F5F 0% 0% no-repeat padding-box;
+  color: #FFFFFF;
+  border: 1px solid #D2DFE9;
+  border-radius: 8px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.form-inputs{
+  display: flex;
+  flex-direction: column;
+}
 
 
 
