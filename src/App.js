@@ -9,6 +9,7 @@ function App() {
   
     <SideBar/>
     <Dashboard/>
+    
     </div>
   );
 }
