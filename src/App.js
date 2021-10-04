@@ -1,7 +1,5 @@
 
 import './App.css';
-import SideBar from './Components/Sidebar';
-import Dashboard from './Components/Dashboard';
 import{BrowserRouter,Route} from 'react-router-dom';
 import Application from './Components/Application';
 import DeviceCategory from './Components/DeviceCategory';

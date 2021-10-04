@@ -3,40 +3,22 @@ import NavBar from './SideBarDivs/NavBar';
 import { FcSmartphoneTablet } from "react-icons/fc"
 import {connect} from 'react-redux';
 import {createCategory,preventDefault,deleteFromCategory,createLoan,deleteLoan} from '../actions'
-import DeviceCategory from './DeviceCategory';
+
  class Dashboard extends Component {
-     
+   
      renderMobile(){
       if (this.props.mobiles.length > 0){
       return this.props.mobiles.map((mobile)=>{
              return (
-                <div key={mobile.name} className='activeLoansPlaneItems'>
-                   <div>
-                        <h3>Reference Name</h3>
-                    </div>
-                    <div>
-                        <h3>Total Amount(#)</h3>
-                    </div>
-                    <div>
-                        <h3>Date Applied</h3>
-                    </div>
-                    <div>
-                        <h3>Date Disbursed</h3>
-                    </div>
-                    <div>
-                        <h3>Repayment Date</h3>
-                    </div>
-                    <div>
-                        <h3>Actions</h3>
-                    </div>
-               
-                            <tr key={mobile.name}>
-                            <td>{mobile.amount}</td>
-                            <td>{mobile.description}</td>
-                            </tr>
-                        
-                            <button onClick={()=>this.props.deleteFromCategory(mobile)}>Remove</button>
-                            </div>     
+                <div key={mobile.name} className='allMobile'>
+                   
+                            <div key={mobile.name}>
+                            <p>Name :{mobile.name}</p>
+                            <p>Amount:{mobile.amount}</p>
+                            <p>Description :{mobile.description}</p>
+                            <button className='subimit' onClick={()=>this.props.deleteFromCategory(mobile)}>Remove</button>
+                            </div>
+                            </div> 
              )
 
          })
@@ -44,6 +26,76 @@ import DeviceCategory from './DeviceCategory';
             return "No Mobile Device Added Yet"
         }
      }
+     renderMobileAsscessories(){
+        if (this.props.allMobileDevices.length > 0){
+        return this.props.allMobileDevices.map((mobile)=>{
+               return (
+                  <div key={mobile.name} className='allMobile'>
+                     
+                              <div key={mobile.name}>
+                              <p>Name :{mobile.name}</p>
+                              <p>Amount:{mobile.amount}</p>
+                              <p>Description :{mobile.description}</p>
+                              <button className='subimit' onClick={()=>this.props.deleteFromCategory(mobile)}>Remove</button>
+                              </div>
+                              </div> 
+               )
+  
+           })
+          }else{
+              return "No Mobile Device Asscessories Added Yet"
+          }
+       }
+       renderTabletsAndLaptops(){
+        if (this.props.allTabletsAndLaptops.length > 0){
+        return this.props.allTabletsAndLaptops.map((mobile)=>{
+               return (
+                  <div key={mobile.name} className='allMobile'>
+                     
+                              <div key={mobile.name}>
+                              <p>Name :{mobile.name}</p>
+                              <p>Amount:{mobile.amount}</p>
+                              <p>Description :{mobile.description}</p>
+                              <button className='subimit' onClick={()=>this.props.deleteFromCategory(mobile)}>Remove</button>
+                              </div>
+                              </div> 
+               )
+  
+           })
+          }else{
+              return "No Laptops Or Tablets Added Yet"
+          }
+       }
+       renderHomeAppliances(){
+        if (this.props.allHomeAppliances.length > 0){
+        return this.props.allHomeAppliances.map((mobile)=>{
+               return (
+                  <div key={mobile.name} className='allMobile'>
+                     
+                              <div key={mobile.name}>
+                              <p>Name :{mobile.name}</p>
+                              <p>Amount:{mobile.amount}</p>
+                              <p>Description :{mobile.description}</p>
+                              <button className='subimit' onClick={()=>this.props.deleteFromCategory(mobile)}>Remove</button>
+                              </div>
+                              </div> 
+               )
+  
+           })
+          }else{
+              return "No Home Appliances Added Yet"
+          }
+       }
+     setToEmtypString(){
+        document.getElementById('description').value = '';
+        document.getElementById('amount').value = '';
+        document.getElementById('refernceNum').value ='';
+        document.getElementById('totalAmount').value = '';
+        document.getElementById('DateAppiled').value = '';
+        document.getElementById('DateDisbured').value = '';
+        document.getElementById('repaymentDate').value = '';
+        
+    }
 
      renderLoans(){
          if(this.props.loans.length > 0){
@@ -110,7 +162,13 @@ import DeviceCategory from './DeviceCategory';
                 <div className='noResultsText'>
                     {this.renderLoans()}
                 </div>
-                <h3 className='NoResultText'>{this.renderMobile()}</h3>
+                <div className='allCatgories'>
+                <div className='NoResultText'>{this.renderMobile()}</div>
+                <div className='NoResultText'>{this.renderMobileAsscessories()}</div>
+                <div className='NoResultText'>{this.renderTabletsAndLaptops()}</div>
+                <div className='NoResultText'>{this.renderHomeAppliances()}</div>
+                </div>
+      
                 <div className='cards'>
                         <div className='box boxOne'>
                         <div className="square-box"></div>
@@ -162,11 +220,11 @@ import DeviceCategory from './DeviceCategory';
                         <label for="DateDisbured">DateDisbured:</label>
                         <input type="date" id="DateDisbured" name="DateDisbured"/>
                         <label for="DateRepayment">Repayment Date:</label>
-                        <input type="date" id="RepaymenyDate" name="RepaymenyDate"/>
+                        <input type="date" id="repaymentDate" name="repaymentDate"/>
 
-                    <button className='subimit' onClick={()=>this.props.createLoan(document.getElementById('refernceNum').value,
+                    <button className='subimit' onClick={()=>{this.props.createLoan(document.getElementById('refernceNum').value,
                     document.getElementById('totalAmount').value,document.getElementById('DateAppiled').value,document.getElementById('DateDisbured').value,
-                    document.getElementById('RepaymenyDate').value)} >Submit</button>
+                    document.getElementById('repaymentDate').value);this.setToEmtypString();}} >Submit</button>
                 </form>
                         </div>
                         <div className='box boxFour'>
@@ -183,8 +241,8 @@ import DeviceCategory from './DeviceCategory';
     <option value="HOME_APPLIANCES">Home Appliances</option>
     <option value="GAMING_CONSOLES">Gaming Consoles</option>
 </select>
-                    <button className='subimit' onClick={()=>this.props.createCategory(document.getElementById('description').value,
-                    document.getElementById('amount').value,this.menu.value)} >Submit</button>
+                    <button className='subimit2' onClick={()=>{this.props.createCategory(document.getElementById('description').value,
+                    document.getElementById('amount').value,this.menu.value);this.setToEmtypString();}} >Submit</button>
                 </form>
                         </div>
                 </div>
@@ -201,7 +259,10 @@ const mapStateToProps = state =>{
     console.log(state)
     return{
         mobiles:state.allMobile ,
-        loans:state.allLoans
+        loans:state.allLoans,
+        allMobileDevices:state.allMobileDevicesAssc,
+        allTabletsAndLaptops:state.allTabletsAndLaptops,
+        allHomeAppliances:state.allHomeAppliances
     }
 }
 
