@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import NavBar from './NavBar';
+import NavBar from './SideBarDivs/NavBar';
 import { FcSmartphoneTablet } from "react-icons/fc"
 import {connect} from 'react-redux';
 import {createCategory,preventDefault,deleteFromCategory,createLoan,deleteLoan} from '../actions'
@@ -80,7 +80,7 @@ import DeviceCategory from './DeviceCategory';
         return (
             <div className='Dashboard'>
                 <NavBar/>
-                <DeviceCategory/>
+               
                 <h1 className='dashBoardText'>Loans</h1>
                 <div className='activeLoansPlane'>
                 <h1 className='dashBoardText'>My Active Loans</h1>
@@ -147,11 +147,11 @@ import DeviceCategory from './DeviceCategory';
          </div>
                     
                           <h3 id='priceRange'>From N50,000 to N500,000 </h3>
-                          <div className='availableDevicesText'>Explore Available Devices</div>
+                          <div className='availableDevicesText'><a href='/DeviceCategory'>Explore Available Devices</a></div>
                         </div>
                     
                         <div id='boxFour' className='box boxFour'>
-                        <h3 className='deviceloansText'>Add Loans To Board</h3>
+                        <h3 className='deviceloansText'>Add Loans To Board(Redux)</h3>
                         <form className='form-inputs' onSubmit={this.props.preventDefault}>
                         <label for="DateAppiled">Reference Number:</label>
                         <input id='refernceNum' placeholder='enter refrence number' type='text'/>
@@ -178,7 +178,7 @@ import DeviceCategory from './DeviceCategory';
                     <select id = "dropdown" ref = {(input)=> this.menu = input}>
     <option value="N/A">N/A</option>
     <option value="MOBILE_DEVICE">Moblie Device</option>
-    <option value="MOBILE_DEVICE_ASSESSORIES">Mobile Device  Assc</option>
+    <option value="MOBILE_DEVICE_ASSESSORIES">Mobile Device  Asscessories</option>
     <option value="TABLETS_LAPTOPS">Tablets And Laptops</option>
     <option value="HOME_APPLIANCES">Home Appliances</option>
     <option value="GAMING_CONSOLES">Gaming Consoles</option>

@@ -1,7 +1,7 @@
 import React from 'react';
 import '../App.css';
 import EasyFinance from '../EasyFinance.svg';
-import Divs from './Divs';
+import Divs from './SideBarDivs/Divs';
 
 
 function Sidebar() {

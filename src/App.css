@@ -400,14 +400,88 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
   display: flex;
   justify-content: space-around;
   width: 1113px;
-  height: 304px;
+  height: 320px;
   background: #FFFFFF 0% 0% no-repeat padding-box;
   box-shadow: 0px 8px 16px #0000000A;
   border-radius: 8px;
+  font-weight: bold;
+}
+.allDevicePurchase{
+  padding-top: 20px;
+  padding-left: 50px;
+  width: 1113px;
+  height: 320px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 8px 16px #0000000A;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #0D1F5F;
+}
+.allDevicePurchase h3{
+  margin-top: 3rem;
+  color: #0D1F5F;
+  font-size: 23px;
+}
+.allDevicePurchase p{
+  margin-top: 3rem;
+  color: #0D1F5F;
 }
 .deviceCat{
-  margin-top: 5rem;
+  margin-top: 8rem;
 }
+.submitAndResetButton{
+  margin-top: 3rem;
+}
+.submit{
+  width: 133px;
+height: 54px;
+background: #1DB291 0% 0% no-repeat padding-box;
+box-shadow: 0px 8px 8px #85858514;
+border-radius: 8px;
+}
+.reset{
+  width: 74px;
+height: 54px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+box-shadow: 0px 8px 8px #bab7b714;
+border: 1px solid #ebebe7;
+border-radius: 8px;
+margin-left: 2rem;
+}
+.deivceSelect{
+  position: absolute;
+ font-size: 1.5rem;
+ left: 20%;
+ padding-top: 1rem;
+}
+
+.backArrow{
+  width: 133px;
+height: 40px;
+background: #D3DFEA24 0% 0% no-repeat padding-box;
+border: 1px solid #D2DFE9;
+border-radius: 8px;
+padding-top: 10px;
+margin-bottom: 30px;
+font-size: 20px;
+font-weight: bold;
+margin-right: 1.4rem;
+}
+.deviceCategory{
+  margin-top: 7rem;
+  margin-left: 3rem;
+}
+
+a { color: inherit;
+  text-decoration: none;
+
+ } 
+
+ .backAndForward{
+   display: flex;
+   
+ }
+
 
 
 
